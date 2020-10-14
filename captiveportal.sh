@@ -98,9 +98,9 @@ apt-get install php7.3-fpm php7.3-mbstring php7.3-mysql php7.3-curl php7.3-gd ph
 echo "┌─────────────────────────────────────────"
 echo "|Configuring system logs"
 echo "└─────────────────────────────────────────"
-wget -q https://raw.githubusercontent.com/tretos53/Captive-Portal-777/master/system_status.sh -O ~/system_status.sh
+wget -q https://raw.githubusercontent.com/tretos53/Captive-Portal-777/master/system_status.sh -O /usr/bin/system_status.sh
 wget -q https://raw.githubusercontent.com/tretos53/Captive-Portal-777/master/logrotate.conf -O /etc/logrotate.conf
-echo "0 13 * * * bash ~/system_status.sh >> ~/systemstatus.log" | crontab -
+echo "0 13 * * * bash /usr/bin/system_status.sh >> /var/log/systemstatus.log" | crontab -
 
 echo "┌─────────────────────────────────────────"
 echo "|Please reboot your pi and test."
