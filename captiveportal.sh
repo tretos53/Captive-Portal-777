@@ -9,7 +9,7 @@ $1 SSID
 #  - default: it will display the default page after connecting to the captiev portal. No internet access.
 #  - offline: it will display a button that will close the CP browser but keep connection to the Raspbery pi. No internet access.
 #  - online: it will display a button that will close the CP browser but keep connection to the Raspbery pi and allow internet access.
-#USAGE
+USAGE
 
 if [ "$EUID" -ne 0 ]
 	then echo "Must be root, run sudo -i before running this script."
