@@ -4,12 +4,12 @@
 $0 Filename captiveportal.sh
 $1 SSID
 
-MODE OF OPERATION NOT YET IMPLEMENTED.
-$2 Mode of operation:
-  - default: it will display the default page after connecting to the captiev portal. No internet access.
-  - offline: it will display a button that will close the CP browser but keep connection to the Raspbery pi. No internet access.
-  - online: it will display a button that will close the CP browser but keep connection to the Raspbery pi and allow internet access.
-USAGE
+#MODE OF OPERATION NOT YET IMPLEMENTED.
+#$2 Mode of operation:
+#  - default: it will display the default page after connecting to the captiev portal. No internet access.
+#  - offline: it will display a button that will close the CP browser but keep connection to the Raspbery pi. No internet access.
+#  - online: it will display a button that will close the CP browser but keep connection to the Raspbery pi and allow internet access.
+#USAGE
 
 if [ "$EUID" -ne 0 ]
 	then echo "Must be root, run sudo -i before running this script."
@@ -17,14 +17,14 @@ if [ "$EUID" -ne 0 ]
 fi
 
 SSID=${1:-CaptivePortal01}
-MODE=${2:-default}
+#MODE=${2:-default}
 
 echo "┌─────────────────────────────────────────"
 echo "|This script might take a while,"
 echo "|so if you dont see much progress,"
 echo "|wait till you see --all done-- message."
 echo "└─────────────────────────────────────────"
-read -p "Press enter to continue"
+read -p -r "Press enter to continue"
 
 echo "┌─────────────────────────────────────────"
 echo "|Updating repositories"
